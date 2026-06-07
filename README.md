@@ -24,5 +24,6 @@
 [Ссылка на ваш работающий сайт]  
 *(будет добавлена после деплоя)*
 
-## Code Climate
-[![Code Climate](https://codeclimate.com/github/Shiniluvv/flaskr-blog/badges/gpa.svg)](https://codeclimate.com/github/Shiniluvv/flaskr-blog)
+## Qlty 
+Примечание: Code Climate больше не предоставляет бесплатные значки для репозиториев с открытым исходным кодом, поэтому в качестве эквивалента используется Qlty.
+[![Maintainability](https://qlty.sh/gh/Shiniluvv/projects/flaskr-blog/maintainability.svg)](https://qlty.sh/gh/Shiniluvv/projects/flaskr-blog)
