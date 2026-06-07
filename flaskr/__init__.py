@@ -24,6 +24,8 @@ def create_app(test_config=None):
     # регистрируем db
     from . import db
     db.init_app(app)
+    db.init_db_automatically(app)
+
 
     # регистрируем auth blueprint
     from . import auth

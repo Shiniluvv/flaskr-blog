@@ -29,4 +29,16 @@ def init_db_command():
 def init_app(app):
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
+
+def init_db_automatically(app):
+    """Автоматически создаёт таблицы при запуске приложения (для Render)."""
+    with app.app_context():
+        db = get_db()
+        cursor = db.execute("SELECT name FROM sqlite_master WHERE type='table' AND (name='user' OR name='post');")
+        tables = cursor.fetchall()
+        if len(tables) < 2:
+            init_db()
+            app.logger.info("Database tables were missing and have been created automatically.")
+        else:
+            app.logger.info("Database tables already exist.")
     
